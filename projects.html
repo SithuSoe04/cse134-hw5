@@ -26,97 +26,22 @@
       </ul>
     </nav>
   </header>
-  <main class="projects">
-    <article>
-      <h2>CSES Website</h2>
-      <h3>Role: Full-Stack Developer</h3>
-      <picture>
-        <source media="(max-width: 600px)" srcset="/assets/cses-home-small.webp" type="image/webp">
-        <source srcset="/assets/cses-home.webp" type="image/webp">
-        <img 
-          src="/assets/cses-home.jpg" 
-          alt="CSES Home Page"
-          loading="lazy" 
-          class="project-image"
-        >
-      </picture>
+  
+  <div class="controls" style="max-width: 950px; margin: 2rem auto 0; padding: 0 1.5rem; display: flex; gap: 1rem;">
+    <button id="loadLocal" style="padding: 0.75rem 1.25rem; font-weight: 600; cursor: pointer; border-radius: 0.75rem; background-color: var(--dark-blue); color: white; border: none; transition: background 0.2s ease, transform 0.2s ease;">Load Local</button>
+    <button id="loadRemote" style="padding: 0.75rem 1.25rem; font-weight: 600; cursor: pointer; border-radius: 0.75rem; background-color: var(--dark-blue); color: white; border: none; transition: background 0.2s ease, transform 0.2s ease;">Load Remote</button>
+  </div>
 
-      <p>A full-stack app for the Computer Science and Engineering Society (CSES).</p>
-      <ul>
-        <li>Collaborated with a team of eight developers to revamp the CSES website using React and Material-UI.</li>
-        <li>Contributed to UI design and feature development through pair programming and Agile workflows.</li>
-        <li>Improved user engagement by implementing interactive event listings and responsive layouts.</li>
-      </ul>
-      <p><a href="https://csesucsd.com/" target="_blank" rel="noopener noreferrer">Visit CSES Website</a></p>
-    </article>
-    <article>
-      <h2>TQT Website</h2>
-      <h3>Role: Full-Stack Developer</h3>
-      <picture>
-        <source media="(max-width: 600px)" srcset="/assets/tqt-home-small.webp" type="image/webp">
-        <source srcset="/assets/tqt-home.webp" type="image/webp">
-        <img 
-          src="/assets/tqt-home.jpg" 
-          alt="TQT Home Page"
-          loading="lazy" 
-          class="project-image"
-        >
-      </picture>
-      <p>A full-stack app for Triton Quantitative Trading (TQT).</p>
-    <ul>
-        <li>Developed a secure membership platform using PostgreSQL for data management and authentication.</li>
-        <li>Implemented a blog page with a Markdown renderer to allow members to publish formatted research articles and updates.</li>
-        <li>Optimized frontend performance and site responsiveness across devices using React and TypeScript.</li>
-    </ul>
-      <p><a href="https://tquantt.com/" target="_blank" rel="noopener noreferrer">Visit TQT Website</a></p>
-    </article>
-    <article>
-        <h2>BURSA Website</h2>
-        <h3>Role: Front-End Developer</h3>
-        <picture>
-          <source media="(max-width: 600px)" srcset="/assets/bursa-home-small.webp" type="image/webp">
-          <source srcset="/assets/bursa-home.webp" type="image/webp">
-          <img 
-            src="/assets/bursa-home.jpg" 
-            alt="BURSA Home Page"
-            loading="lazy" 
-            class="project-image"
-          >
-        </picture>
-        <p>A full-stack app for the Burmese Students Association (BURSA).</p>
-        <ul>
-            <li>Designed and developed the entire BURSA website using React and Material UI to create a responsive, user-friendly interface.</li>
-            <li>Ensured the website's functionality across different devices and screen sizes for optimal user experience.</li>
-            <li>Imeplemented the sections for Events, Meet the Team, and Contact Us, providing users with easy access to upcoming events, team information, and a way to get in touch with the organization.</li>
-        </ul>
-        <p><a href="https://bursaucsd.github.io/" target="_blank" rel="noopener noreferrer">Visit BURSA Website</a></p>
-    </article>
-    <article>
-        <h2>GAMED</h2>
-        <h3>Role: Front-End Developer</h3>
-        <picture>
-          <source media="(max-width: 600px)" srcset="/assets/gamed-home-small.webp" type="image/webp">
-          <source srcset="/assets/gamed-home.webp" type="image/webp">
-          <img 
-            src="/assets/gamed-home.jpg" 
-            alt="GAMED Home Page"
-            loading="lazy" 
-            class="project-image"
-          >
-        </picture>
-        <p>A social platform designed for gamers to connect, form teams, and share experiences across different games and communities.</p>
-        <ul>
-            <li>Designed user-friendly interfaces and intuitive workflow for seamless user experience</li>
-            <li>Developed interactive player profiles and matchmaking features based on shared gaming interests.</li>
-            <li>Implemented a recommendation system to suggest potential teammates using activity data and player preferences.</li>
-        </ul>
-        <p><a href="https://ucsdgamed.onrender.com/" target="_blank" rel="noopener noreferrer">Visit GAMED Website</a></p>
-    </article>
+  <main class="projects">
+    <p id="statusMessage" style="grid-column: 1 / -1; text-align: center; color: var(--muted);">Click a button to load projects.</p>
   </main>
+
   <footer>
     <p>&copy; 2025 Sithu Soe. All rights reserved.</p>
   </footer>
 
+  <script src="project-card.js"></script>
   <script src="theme-toggle.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
