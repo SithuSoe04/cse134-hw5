@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    const t = localStorage.getItem('theme');
+    if (t === 'light') document.documentElement.classList.add('light-mode');
+  </script>
+  <title>Contact | Sithu Soe</title>
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <div class="nav-left">
+        <a href="index.html">SS</a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu"></label>
+      <ul class="nav-right">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact Me</h1>
+    <form>
+      <fieldset>
+        <legend>Contact Form</legend>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" autocomplete="off"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" autocomplete="off"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40" autocomplete="off"></textarea><br><br>
+        <button type="submit">Send</button>
+      </fieldset>
+    </form>
+    <section>
+      <h2>Things I'm Happy to Chat About</h2>
+      <p>Feel free to reach out if you want to talk about <strong><em>sports</em></strong>, gaming, technology, school, or work. I am more than happy to chat about random things too!</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Sithu Soe. All rights reserved.</p>
+  </footer>
+
+  <script src="theme-toggle.js"></script>
+</body>
+</html>

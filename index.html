@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    const t = localStorage.getItem('theme');
+    if (t === 'light') document.documentElement.classList.add('light-mode');
+  </script>
+  <title>Home | Sithu Soe</title>
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <div class="nav-left">
+        <a href="index.html" class="active">SS</a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu"></label>
+      <ul class="nav-right">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro" class="intro-section">
+      <article class="intro-text">
+        <h1>Hi, I'm Sithu Soe</h1>
+        <p>I am a senior studying <i>Mathematics - Computer Science</i> at UC San Diego. I'm an <strong>aspiring software engineer</strong> passionate about web applications and exploring new technologies. I'm part of multiple student organizations focused on building collaborative CS communities.</p>
+      </article>
+
+      <figure class="intro-photo">
+        <picture>
+          <source media="(max-width: 600px)" srcset="/assets/sithusoe.webp" type="image/webp">
+          <source srcset="/assets/sithusoe.webp" type="image/webp">
+          <img 
+            src="/assets/sithusoe.jpg" 
+            alt="Sithu Soe Skiing Trip"
+            loading="lazy" 
+            style="object-fit: cover; object-position: center; border-radius: 8px; max-width: 300px; height: auto;"
+          >
+        </picture>
+        <figcaption>December 2024 Trip!</figcaption>
+      </figure>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Java, Python, PHP, HTML, CSS, JavaScript, TypeScript, LaTeX, MATLAB, SQL</li>
+        <li><strong>Frameworks:</strong> Express, Node.js, Flask, Angular, JUnit, Laravel, FastAPI</li>
+        <li><strong>Libraries:</strong> React, PrimeReact, PrimeFlex, Material-UI, Tailwind</li>
+        <li><strong>Developer Tools:</strong> Git, GitHub, VS Code, Eclipse, Figma, Docker, Postman, GitHub Actions, ESLint, Jira</li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>Coding</li>
+        <li>Gaming</li>
+        <li>Hiking</li>
+        <li>Soccer</li>
+      </ul>
+    </section>
+
+    <article id="fun-fact">
+      <h2>Fun Fact</h2>
+      <p>I was a <b>Psychology</b> major before switching to <b>Mathematics - Computer Science</b> at UC San Diego.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sithu Soe. All rights reserved.</p>
+  </footer>
+
+  <script src="theme-toggle.js"></script>
+</body>
+</html>

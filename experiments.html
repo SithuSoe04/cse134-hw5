@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Experiments</title>
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- <li><a href="experiments.html">Experiments</a></li> -->
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+        <h2>Picture</h2>
+            <picture>
+                <source srcset="/assets/sithusoe-big.jpg" media="(width >= 600px)" />
+                <img src="/assets/sithusoe-small.jpg" alt="sithusoe" />
+            </picture>
+        <h2>Audio</h2>
+    </section>
+    <section>
+        <audio controls>
+            <source src="/assets/meow.ogg" type="audio/ogg">
+            <source src="/assets/meow.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    <section>
+    <h2>Video</h2>
+        <video width="320" height="240" controls>
+            <source src="/assets/countdown.mp4" type="video/mp4">
+            <source src="/assets/countdown.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <section>
+        <h2>Canvas</h2>
+            <canvas id="myCanvas" width="250" height="70" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "35px Arial";
+                ctx.strokeText("This is so cool",10,50);
+            </script>
+    </section>
+    <section>
+    <h2>Extra Credit</h2>
+        <math>
+            <mi>E</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+            </msup>
+        </math>
+        <p>Despite being in the HTML specification for a long time, developers could not make use of it until recently because browsers did not support it until their recent releases. Without browser support, there is no point for a developer to add MathML elements since the browser would not be able to render it. With increasing number of browsers supporting MathML recently, developers can now make use of it.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Sithu Soe. All rights reserved.</p>
+  </footer>
+</body>
+</html>

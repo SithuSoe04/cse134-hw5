@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    const t = localStorage.getItem('theme');
+    if (t === 'light') document.documentElement.classList.add('light-mode');
+  </script>
+  <title>Experience | Sithu Soe</title>
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <div class="nav-left">
+        <a href="index.html">SS</a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu"></label>
+      <ul class="nav-right">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <highlight-box>
+        <section>
+          <div>
+            <p>School: University of California, San Diego</p>
+            <p>Major: Mathematics - Computer Science</p>
+            <p>Expected Graduation: June 2026</p>
+          </div>
+          <picture>
+            <source media="(max-width: 600px)" srcset="/assets/ucsdlogo-small.webp" type="image/webp">
+            <source srcset="/assets/ucsdlogo.webp" type="image/webp">
+            <img 
+              src="/assets/ucsdlogo.png" 
+              alt="UCSD Logo"
+              loading="lazy" 
+              style="object-fit: cover; object-position: center; border-radius: 8px; max-width: 150px; height: auto;"
+            >
+          </picture>
+        </section>
+        <label for="ts">Graduation Progress</label>
+        <progress id="ts" value="77" max="100">77%</progress>
+      </highlight-box>
+    </section>
+    <section>
+      <h2>Work Experience</h2>
+      <ol>
+        <li><strong>Associate Software Engineer Intern</strong> – ServiceNow (Jun 2025 – Sept 2025)</li>
+        <li><strong>Associate Software Engineer Intern</strong> – ServiceNow (Jun 2024 – Sept 2024)</li>
+        <li><strong>Full-Stack Developer Intern</strong> – Frontiir (Jun 2023 – Sept 2023)</li>
+        <li><strong>CSE Tutor</strong> – UCSD CSE Department (Jan 2023 – March 2023)</li>
+        <li><strong>AP Physics 1 Tutor</strong> – International School of Myanmar (Aug 2021 – May 2022)</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Leadership Experience</h2>
+      <ol>
+        <li><strong>VP Internal</strong> – Computer Science and Engineering Society (Jun 2024 – Jun 2025)</li>
+        <li><strong>VP Operations</strong> – Computer Science and Engineering Society (Jun 2023– Jun 2024)</li>
+        <li><strong>VP Internal</strong> – Triton Engineering Student Council (Sept 2023 – Jun 2024)</li>
+        <li><strong>VP External</strong> – Computer Science and Engineering Society (January 2023 – Jun 2023)</li>
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Sithu Soe. All rights reserved.</p>
+  </footer>
+
+  <script src="theme-toggle.js"></script>
+</body>
+</html>
