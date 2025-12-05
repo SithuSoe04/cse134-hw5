@@ -229,16 +229,105 @@ main {
     text-align: center;
     margin-top: 0.25rem;
   }
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    background: var(--glass);
+    border: 1px solid var(--border-color);
+    color: var(--text);
+    transition: all 0.3s ease;
+  }
+
+  .social-links a:hover {
+    background: var(--dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px var(--hover-shadow);
+    border-color: var(--dark-blue);
+  }
+
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-#skills,
-#interests,
 #fun-fact {
   ul {
     list-style: disc;
     margin-left: 1.5rem;
     color: var(--muted);
   }
+}
+
+skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+skill-category {
+    display: block;
+    background: var(--glass);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+skill-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px var(--hover-shadow);
+    border-color: var(--dark-blue);
+}
+
+skill-category h3 {
+    color: var(--text);
+}
+
+interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+interest-card {
+    background: var(--glass);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+interest-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 24px var(--hover-shadow);
+    border-color: var(--accent-purple);
+}
+
+interest-icon {
+    font-size: 24px;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+interest-card span {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 /*  EXPERIENCE PAGE */
@@ -290,6 +379,150 @@ highlight-box {
 
 :root.light-mode highlight-box {
   background: linear-gradient(145deg, #f1f5f9, #ffffff);
+}
+
+highlight-box {
+  display: block;
+  background: linear-gradient(145deg, #101a2b, #0b1220);
+  padding: 1.75rem 2rem;
+  border-left: 6px solid var(--dark-blue);
+  border-radius: var(--radius);
+  color: var(--text);
+  box-shadow: 0 4px 18px var(--shadow);
+  margin-bottom: 2rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 22px var(--hover-shadow);
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-top: 0.75rem;
+  }
+
+  progress {
+    width: 100%;
+    height: 16px;
+    border-radius: var(--radius);
+    accent-color: var(--dark-blue);
+    background-color: var(--input-border);
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  div {
+    flex: 1;
+  }
+
+  img {
+    flex-shrink: 0;
+  }
+}
+
+:root.light-mode highlight-box {
+  background: linear-gradient(145deg, #f1f5f9, #ffffff);
+}
+
+timeline-view {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-top: 2rem;
+}
+
+timeline-view::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--dark-blue), var(--input-border));
+}
+
+timeline-item {
+  display: block;
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+timeline-marker {
+  display: block;
+  position: absolute;
+  left: -2.1rem;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--dark-blue); 
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 3px var(--dark-blue);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+timeline-item:hover timeline-marker {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.3);
+}
+
+timeline-content {
+  display: block;
+  background: linear-gradient(145deg, #101a2b, #0b1220);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+timeline-item:hover timeline-content {
+  transform: translateX(8px);
+  box-shadow: 0 4px 20px var(--hover-shadow);
+}
+
+timeline-date {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--dark-blue);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+timeline-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+timeline-company {
+  display: block;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+:root.light-mode timeline-view::before {
+  background: linear-gradient(180deg, var(--dark-blue), #d1d5db);
+}
+
+:root.light-mode timeline-content {
+  background: linear-gradient(145deg, #f9fafb, #ffffff);
+  border-left-color: var(--dark-blue);
+}
+
+:root.light-mode timeline-marker {
+  background: var(--dark-blue);
+  border-color: #ffffff;
 }
 
 /* CONTACT PAGE */
@@ -456,6 +689,12 @@ footer {
       height: auto;
     }
 
+    p {
+      text-align: left;
+    }
+  }
+
+  #skills {
     p {
       text-align: left;
     }
